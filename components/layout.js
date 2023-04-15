@@ -12,7 +12,7 @@ const layout = ({title, children}) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-        <div>
+        <div className='bg-gray-300'> 
             {children}
         </div>
     </div>
