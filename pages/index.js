@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Layout from "../components/layout";
 import { useEffect, useState } from "react";
 
@@ -29,6 +30,8 @@ export default function Home({styles, pokeData}) {
           pokeArr.map((pokemon, index) => {
             return (
               <div key= {pokemon.name} className="p-4">
+              <Link href={`/pokemons/${pokemon.id}`} legacyBehavior>
+                <a>
                 <div className="bg-gray-200 py-4 px-6 rounded">
                   <img src={pokemon.image} alt="pokemonImg" className="h-[152px] w-[152px] sm:h-[200px] w-[200px]" />
 
@@ -54,6 +57,8 @@ export default function Home({styles, pokeData}) {
                     </span>
                   </p>
                 </div>  
+                </a>
+              </Link>
               </div>
             );
           })
