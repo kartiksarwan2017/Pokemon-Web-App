@@ -119,7 +119,7 @@ export async function getServerSideProps({query}) {
 
     try{
 
-        const res = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${query.id}`);
+        const res = await fetch(`https://api.pikaserve.xyz/pokemon/${query.id}`);
         const data = await res.json();
         return {
             props: {

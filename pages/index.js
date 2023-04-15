@@ -158,7 +158,7 @@ export default function Home({styles, pokeData}) {
 export async function getStaticProps(){
   
   try{
-    const res = await fetch("https://pokeapi.co/api/v2/pokemon/");
+    const res = await fetch("https://api.pikaserve.xyz/pokemon/all");
 
     const data = await res.json();
 
